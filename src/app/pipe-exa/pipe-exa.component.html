@@ -1,0 +1,16 @@
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let detail of employees">
+              <td>{{detail.name | mypipe:detail.gen}}</td>
+              <td>{{detail.age}}</td>
+              <td>{{detail.gen}}</td>
+        </tr>
+        </tbody>
+    </table> 
