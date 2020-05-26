@@ -1,0 +1,23 @@
+.register{
+    width: 30%;
+    background-color: #eee;
+    padding: 25px;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+button{
+    justify-content: center;
+    margin: auto;
+    align-content: center;
+}
+
+p{
+    text-align: center;
+}

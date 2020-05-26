@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <ul class="navbar-nav">
+   <h1 class="heading">JWT</h1>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/events">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/special">Dashboard</a>
+    </li>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" *ngIf="!_authservice.loggedIn()" routerLink="/login">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" *ngIf="!_authservice.loggedIn()" routerLink="/register">Register</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="cursor:pointer" (click)="_authservice.logoutUser()" *ngIf="_authservice.loggedIn()" >Logout</a>
+      </li>
+    </ul>
+  </ul>
+</nav>
+<div>
+  <router-outlet></router-outlet>
+</div>

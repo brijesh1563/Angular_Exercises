@@ -1,0 +1,15 @@
+<form action="/action_page.php" class="register mt-5">
+  <div class="form-group ">
+      <h2>Login</h2>
+    <label for="email">Email:</label>
+    <input type="email" [(ngModel)]="loginUserData.email" name="email"  class="form-control" id="email">
+  </div>
+  <div class="form-group">
+    <label for="pwd">Password:</label>
+    <input type="password" [(ngModel)]="loginUserData.password" name="password" class="form-control" id="pwd">
+  </div>
+  <div class="form-group form-check">
+  </div>
+  <button type="submit" (click) ="loginUser()" class="btn btn-success">Login</button>
+  <p>Create an Account <a href="/register">Register</a></p>
+</form>

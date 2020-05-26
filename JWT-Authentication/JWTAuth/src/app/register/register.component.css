@@ -1,0 +1,18 @@
+.register{
+    width: 30%;
+    background-color: #eee;
+    padding: 25px;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+p{
+    text-align: center;
+}
+
