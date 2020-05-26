@@ -1,0 +1,156 @@
+<!-- 
+<div>
+      
+  <h1>Tables and Cards</h1>
+  <div class="doNotPrint"> 
+    <button (click)= "onPrint()" type="button" class="btn btn-primary">
+      Print
+    </button>
+  </div>
+    
+  <ngb-tabset [destroyOnHide]="false">
+    
+    <ngb-tab title="Table">
+      <ng-template ngbTabContent>
+       
+          <ag-grid-angular
+          #myGrid
+          style="height: 500px;"
+          class="ag-theme-balham"
+      
+          [rowData]="rowData"
+          [columnDefs]="columnDefs"
+          [gridOptions]="gridOptions"
+          [cacheOverflowSize]="cacheOverflowSize"
+          [maxConcurrentDatasourceRequests]="maxConcurrentDatasourceRequests"
+          [infiniteInitialRowCount]="infiniteInitialRowCount"
+          [pagination]=true
+      
+          (gridReady)="onGridReady($event)"
+          (paginationChanged)="onPaginationChanged($event)"
+      >
+      </ag-grid-angular>
+      
+      </ng-template>
+    </ngb-tab>
+     
+    <ngb-tab>
+      <ng-template ngbTabTitle>Cards</ng-template>
+      <ng-template ngbTabContent>
+        
+
+        <div class="row mt-5 width">
+          <div class="col-md-4 mb-3" *ngFor="let item of items | paginate:{id:'listing_pagination',
+          itemsPerPage:10,
+          currentPage:page,
+          totalItems:totalRec}"> 
+            <div class="card text-center">
+              <div class="card-body">
+                <img src="{{item.image}}" alt="image" class="img-thumbnail">
+                <h5 class="card-text">{{item.name}}</h5>
+                <h5 class="card-text">{{item.email}}</h5>
+                <h5 class="card-text">{{item.address}}</h5>
+                <h5 class="card-text">{{item.phone}}</h5>    
+              </div>
+            </div>
+          </div>
+        </div>
+        <pagination-controls id="listing_pagination" maxSize="S" directionLinks="true" (pageChange)="page=$event"></pagination-controls>
+
+
+
+
+          
+      </ng-template>
+    </ngb-tab>
+     
+    
+     
+  </ngb-tabset>
+  </div> 
+
+
+
+ -->
+
+ <div class="doNotPrint"> 
+  <button (click)= "onPrint()" type="button" class="btn btn-primary mt-3 mr-5">
+    Print
+  </button>
+</div>
+<div class="">
+      
+  <h1>Tables and Cards</h1>
+  
+    
+  <ngb-tabset [destroyOnHide]="false">
+    
+    <ngb-tab title="Table">
+      <ng-template ngbTabContent>
+      
+          <ag-grid-angular
+          #myGrid
+          style="height: 500px;"
+          class="ag-theme-material"
+      
+          [rowData]="rowData"
+          [columnDefs]="columnDefs"
+          [gridOptions]="gridOptions"
+          [cacheOverflowSize]="cacheOverflowSize"
+          [maxConcurrentDatasourceRequests]="maxConcurrentDatasourceRequests"
+          [infiniteInitialRowCount]="infiniteInitialRowCount"
+          [pagination]=true
+      
+          (gridReady)="onGridReady($event)"
+          
+      >
+      </ag-grid-angular>
+      </ng-template>
+    </ngb-tab>
+     
+    <ngb-tab>
+      <ng-template ngbTabTitle>Cards</ng-template>
+      <ng-template ngbTabContent>
+        <div class="row mt-5 width">
+          <div class="col-md-4 mb-3" *ngFor="let item of items | paginate:{id:'listing_pagination',
+          itemsPerPage:10,
+          currentPage:page,
+          totalItems:totalRecords}"> 
+            <div class="card text-center">
+              <div class="card-body">
+                <img src="{{item.image}}" alt="Responcive image" class="img-thumbnail">
+                <h5 class="card-text">{{item.name}}</h5>
+                <h5 class="card-text">{{item.email}}</h5>
+                <h5 class="card-text">{{item.address}}</h5>
+                <h5 class="card-text">{{item.phone}}</h5>    
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>Current page: {{page}} of {{totalRecords - 900}}</p>
+        <pagination-controls id="listing_pagination" maxSize="S" directionLinks="true" (pageChange)="page=$event"></pagination-controls>
+
+
+
+
+          
+      </ng-template>
+    </ngb-tab>
+     
+    
+     
+  </ngb-tabset>
+  </div> 
+
+
+
+
+
+<!-- <master-header *ngIf="isUserLogged"></master-header> -->
+<!-- <router-outlet></router-outlet> -->
+
+
+
+<!-- <master-header *ngIf="isUserLogged"></master-header> -->
+<!-- <router-outlet></router-outlet> -->
+
