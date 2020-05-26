@@ -1,0 +1,19 @@
+.matStepperPrevious, .matStepperReset{
+    color: red;
+}
+
+.matStepperNext, .matStepperSubmit{
+color: green;
+}
+
+p{
+    color: seashell;
+}
+
+.mat-stepper-horizontal {
+    margin-top: 8px;
+  }
+  
+  .mat-form-field {
+    margin-top: 16px;
+  }

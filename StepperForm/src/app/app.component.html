@@ -1,0 +1,37 @@
+<h2>Registration with Stepper-form</h2>
+<mat-horizontal-stepper linear #stepper>
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Personal Info.</ng-template>
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput  formControlName="Name" required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup" >
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Contact</ng-template>
+      <mat-form-field>
+        <mat-label>Contact</mat-label>
+        <input matInput formControlName="Contact" required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Done</ng-template>
+    <p>You are now done.</p>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="stepper.reset()">Reset</button>
+      <button mat-button (click)="getDetail()">Submit</button>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>
